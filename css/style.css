@@ -2,6 +2,13 @@
 
 @media (min-width: 1200px)  {
 
+h1,h2,h3,h4,h5,h6 {
+
+  text-shadow: #0a0a0a 2px 2px;
+
+}
+
+
   h1,h2,h3,h4,h5,h6,p,span,p {
 
 margin:0;
@@ -36,7 +43,7 @@ margin:0;
 
 .content2 {
 
-      z-index: 0;
+      z-index: 10;
       background: url('http://www.bergslagen.se/images/18.7a7c1e1a151abe0dc6e31bb/1454491760177/faluv%C3%A4gg.jpg');
       background-repeat: no-repeat;
       height: 600px;
@@ -46,7 +53,7 @@ margin:0;
       position: relative;
       top: 118px;
     display: grid;
-    grid-template-columns: 35% auto;
+    grid-template-columns: 26% auto;
     grid-template-rows: 100%;
     grid-template-areas:
     ". content_2_grids";
@@ -62,22 +69,24 @@ background-size: cover; */
 
 .content_2_grid {
   grid-gap: 20px;
-  width: 100%;
-  display: grid;
-  grid-area: content_2_grids;
-  grid-template-columns: 22% 22% 22%;
-  grid-template-rows: 10% 33% 33% 10%;
-  grid-template-areas:
-      "rubrik1 rubrik1 rubrik1"
-      "imgcalenders imgcalenders block1"
-      "block2 block3 block4"
-      ". . .";
+      width: 100%;
+      display: grid;
+      grid-area: content_2_grids;
+      grid-template-columns: 22% 22% 22%;
+      grid-template-rows: 10% 33% 33% 10%;
+      grid-template-areas:
+          "rubrik1 rubrik1 rubrik1"
+          "imgcalenders imgcalenders block1"
+          "block2 block3 block4"
+          ". . .";
+      align-content: center;
 
 }
 
 .img_calender {
-grid-area:imgcalenders;
-height:33%;
+  width: 103%;
+      grid-area: imgcalenders;
+      height: 33%;
 
 }
 
@@ -112,7 +121,7 @@ width: 10%;
       grid-template-areas:
           ". . ."
           ". calendar_block_times ."
-          ". calendar_blocks_hr1 . "
+          ". calendar_block_times . "
           ". calendar_block_activates ."
           ". calendar_blocks_hr2 ."
           ". calendar_block_places ."
@@ -131,7 +140,7 @@ grid-template-columns: 5% auto 5%;
 grid-template-areas:
 ". . ."
 ". calendar_block_times ."
-". calendar_blocks_hr1 . "
+". calendar_block_times . "
 ". calendar_block_activates ."
 ". calendar_blocks_hr2 ."
 ". calendar_block_places ."
@@ -149,7 +158,7 @@ grid-template-columns: 5% auto 5%;
 grid-template-areas:
 ". . ."
 ". calendar_block_times ."
-". calendar_blocks_hr1 . "
+". calendar_block_times . "
 ". calendar_block_activates ."
 ". calendar_blocks_hr2 ."
 ". calendar_block_places ."
@@ -168,7 +177,7 @@ grid-template-columns: 5% auto 5%;
 grid-template-areas:
 ". . ."
 ". calendar_block_times ."
-". calendar_blocks_hr1 . "
+". calendar_block_times . "
 ". calendar_block_activates ."
 ". calendar_blocks_hr2 ."
 ". calendar_block_places ."
@@ -194,9 +203,43 @@ grid-area:calendar_block_activates;
 }
 
 .calendar_block_time {
-grid-area:calendar_block_times;
+  box-shadow: #696363 3px 3px;
+      bottom: 30px;
+      margin: 0 auto;
+      width: 40%;
+      background-color: #139594;
+      display: grid;
+      grid-template-columns: 100%;
+      grid-template-rows: 60% 40%;
+      grid-template-areas:
+          "times"
+          "months";
+      grid-area: calendar_block_times;
+      position: relative;
+      height: 122%;
 
 }
+
+.time {
+  text-shadow: #0a0a0a 2px 2px;
+  font-weight: bold;
+  font-size: 28px;
+  align-self: center;
+  color: white;
+  grid-area: times;
+
+
+}
+
+.month {
+    text-shadow: #0a0a0a 2px 2px;
+    font-weight: bold;
+color:white;
+grid-area:months;
+
+}
+
+
 
 .calendar_block_hr1 {
 width:20%;
@@ -280,13 +323,13 @@ grid-area:content3_txts;
   .bgimages  {
 
     width: 100%;
-    top: 125px;
-    position: relative;
-    height: 690px;
-    display: grid;
-    grid-template-columns: 25% 25% auto auto;
-    grid-template-rows: 100%;
-    grid-template-areas: "bgone bgtwo bgtwo bgtwo";
+        top: 125px;
+        position: relative;
+        height: 690px;
+        display: grid;
+        grid-template-columns: 20% 2% auto auto;
+        grid-template-rows: 100%;
+        grid-template-areas: "bgone bgtwo bgtwo bgtwo";
 
 
 
@@ -319,7 +362,7 @@ grid-template-columns: 23% 10% auto auto;
 footer {
   height: 338px;
       display: grid;
-      grid-template-columns: 28% 20% 20% 20% 10%;
+      grid-template-columns: auto 20% 20% 20% auto;
       grid-template-rows: 100%;
       grid-template-areas: ". footerparta footerpartb footerpartc .";
       background-color: #139694;
@@ -504,15 +547,15 @@ padding:5px;
 
 
 .two  {
-    grid-row-gap: 10px;
-  display: grid;
-      grid-template-columns: auto auto auto;
+  grid-row-gap: 10px;
+      display: grid;
+      grid-template-columns: 8% auto auto;
       grid-template-rows: 10% auto auto 10%;
       grid-template-areas:
-      ". . ."
-      ". two_row_as ."
-      ". two_row_bs . "
-      ". . .";
+          ". . ."
+          ". two_row_as ."
+          ". two_row_bs . "
+          ". . .";
       /* background-color: #b4d24c; */
       width: 100%;
       grid-area: bgtwo;
@@ -552,14 +595,15 @@ grid-template-areas:
 
 
 .two_row_column_a {
-  background-color:White;
-display: grid;
-grid-area:two_row_column_as;
-grid-template-columns: 100%;
-grid-template-rows: 80% 20%;
-grid-template-areas:
-"two_row_column_a_imgs"
-"two_row_column_a_spans";
+  background-color: White;
+  display: grid;
+  grid-area: two_row_column_as;
+  grid-template-columns: 100%;
+  grid-template-rows: 87% auto;
+  grid-template-areas:
+      "two_row_column_a_imgs"
+      "two_row_column_a_spans";
+}
 
 }
 
@@ -569,7 +613,7 @@ grid-template-areas:
 display: grid;
 grid-area:two_row_column_bs;
 grid-template-columns: 100%;
-grid-template-rows: 80% 20%;
+  grid-template-rows: 87% auto;
 grid-template-areas:
 "two_row_column_b_imgs"
 "two_row_column_b_spans";
@@ -581,7 +625,7 @@ grid-template-areas:
 display: grid;
 grid-area:two_row_column_cs;
 grid-template-columns: 100%;
-grid-template-rows: 80% 20%;
+  grid-template-rows: 87% auto;
 grid-template-areas:
 "two_row_column_c_imgs"
 "two_row_column_c_spans";
@@ -596,7 +640,7 @@ grid-template-areas:
 
   .two_row_column_a_img {
 
-      height: 75%;
+    height: 91%;
         object-fit: cover;
         padding: 10px;
         /* align-self: center; */
@@ -609,7 +653,7 @@ grid-template-areas:
 
 
     .two_row_column_b_img {
-        height: 75%;
+        height: 91%;
           object-fit: cover;
           padding: 10px;
           /* align-self: center; */
@@ -620,7 +664,7 @@ grid-template-areas:
     }
 
     .two_row_column_c_img {
-      height: 75%;
+        height: 91%;
           object-fit: cover;
           padding: 10px;
           /* align-self: center; */
@@ -673,27 +717,22 @@ grid-template-areas:
 
 
   .fixed_2 {
-      top: 119px;
-    z-index:-2;
-    margin:0;
-    padding:0;
-
-    background-image:url('https://images.unsplash.com/photo-1515465238926-3f99c4b9243a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80');
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-
-
-    width: 100%;
-
+    top: 119px;
+        z-index: -2;
+        margin: 0;
+        padding: 0;
+        /* background-image: url(https://images.unsplash.com/photo-1515465238926-3f99c4b9243a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80); */
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        width: 100%;
         position: relative;
-    min-height:700px;
+        min-height: 700px;
         display: grid;
-        grid-template-columns: 25% auto auto auto auto;
+        grid-template-columns: 20% 2% auto auto auto;
         grid-template-rows: 100%;
-        grid-template-areas:
-        "fixed_imgas . fix_twos .";
+        grid-template-areas: "fixed_imgas . fix_twos .";
 
 
 
@@ -704,17 +743,19 @@ grid-template-areas:
     background-image: url(https://images.unsplash.com/photo-1509372064060-b78e139d42f4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=701&q=80);
     background-repeat: no-repeat;
     background-attachment: fixed;
-    height: 108%;
+    height: 100%;
     grid-area: fixed_imgas;
     position: relative;
-    top: 0px;
+    top: 0;
+    background-size: contain;
+    background-position-x: -217px;
     background-position-y: 65px;
     grid-template-rows: 6% auto;
     display: grid;
-grid-template-columns: auto auto auto;
-grid-template-areas:
-    ". . ."
-    ". . fixedtitle";
+    grid-template-columns: auto auto auto;
+    grid-template-areas:
+        ". . ."
+        ". . fixedtitle";
 
   }
 
@@ -723,16 +764,17 @@ grid-template-areas:
 
   .fixed2_btn {
 
-      font-size: 12px;
-      border: 0;
-      background-color: #009da1;
-      grid-area: loadbtns;
-      color: white;
-      width: 50%;
-      height: 40px;
-      margin: 0 auto;
-      margin-top: 45px;
-  grid-area:loadbtns;
+    font-weight: bold;
+    font-size: 16px;
+    border: 0;
+    background-color: #009da1;
+    grid-area: loadbtns;
+    color: white;
+    width: 50%;
+    height: 40px;
+    margin: 0 auto;
+    margin-top: 45px;
+    grid-area: loadbtns;
 
   }
 
@@ -964,7 +1006,9 @@ grid-area:commentss;
 }
 
 .columntxt {
-
+  font-weight: 100;
+  line-height: 26px;
+  font-family: none;
 grid-area:columntxts;
 
 }
@@ -1226,6 +1270,9 @@ display: inline;
 padding:10px;
 
   }
+
+
+
 
 
 
